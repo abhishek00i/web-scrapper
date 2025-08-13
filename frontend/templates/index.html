@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Scraper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Hotel Search</h1>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <form action="/scrape" method="post" class="space-y-4">
+                <div>
+                    <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+                    <input type="text" name="location" id="location" required
+                           class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2"
+                           placeholder="e.g., New York">
+                </div>
+                <div>
+                    <label for="checkin_date" class="block text-sm font-medium text-gray-700">Check-in Date</label>
+                    <input type="date" name="checkin_date" id="checkin_date" required
+                           class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                </div>
+                <div>
+                    <label for="checkout_date" class="block text-sm font-medium text-gray-700">Check-out Date</label>
+                    <input type="date" name="checkout_date" id="checkout_date" required
+                           class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2">
+                </div>
+                <div>
+                    <label for="num_adults" class="block text-sm font-medium text-gray-700">Number of Adults</label>
+                    <input type="number" name="num_adults" id="num_adults" required min="1"
+                           class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2"
+                           placeholder="e.g., 2">
+                </div>
+                <div>
+                    <label for="num_children" class="block text-sm font-medium text-gray-700">Number of Children</label>
+                    <input type="number" name="num_children" id="num_children" required min="0"
+                           class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2"
+                           placeholder="e.g., 0">
+                </div>
+                <div>
+                    <label for="children_ages" class="block text-sm font-medium text-gray-700">Children's Ages (comma-separated)</label>
+                    <input type="text" name="children_ages" id="children_ages"
+                           class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2"
+                           placeholder="e.g., 4,6">
+                </div>
+                <button type="submit"
+                        class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">
+                    Search Hotels
+                </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        console.log("Index page loaded.");
+    </script>
+</body>
+</html>
